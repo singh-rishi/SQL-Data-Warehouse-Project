@@ -78,11 +78,6 @@ The data architecture for this project follows the **Medallion Architecture** â€
   - Flat Table  
   - Aggregated Table  
 
-### ðŸ“Š Consumption
-- **BI & Reporting**  
-- **Ad-hoc SQL Queries**  
-- **Machine Learning**  
-
 ---
 ### BI: Analytics & Reporting (Data Analytics)
 
