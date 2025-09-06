@@ -37,7 +37,53 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 - **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.  
 
 ---
+## 🏗️ Data Architecture
 
+The data architecture for this project follows the **Medallion Architecture** — **Bronze, Silver, and Gold layers**:
+
+<img width="971" height="542" alt="ETL Map-Page-2 drawio" src="https://github.com/user-attachments/assets/68684574-a141-4ff8-87dd-169f778f3a9b" />  
+
+### 🔸 Data Warehouse
+
+**1. Bronze Layer**  
+- Stores raw data *as-is* from the source systems.  
+- Data is ingested from CSV files into SQL Server Database.  
+- **Object Type**: Tables  
+- **Load**: Batch Processing, Full Load, Truncate & Insert  
+- **Transformations**: None  
+- **Data Model**: None (as-is)  
+
+**2. Silver Layer**  
+- Includes **data cleansing, standardization, and normalization** processes to prepare data for analysis.  
+- **Object Type**: Tables  
+- **Load**: Batch Processing, Full Load, Truncate & Insert  
+- **Transformations**:  
+  - Data Cleansing  
+  - Data Standardization  
+  - Data Normalization  
+  - Derived Columns  
+  - Data Enrichment  
+- **Data Model**: None (as-is)  
+
+**3. Gold Layer**  
+- Houses **business-ready data** modeled into a star schema required for reporting and analytics.  
+- **Object Type**: Views  
+- **Load**: No Load  
+- **Transformations**:  
+  - Data Integrations  
+  - Aggregations  
+  - Business Logic  
+- **Data Model**:  
+  - Star Schema  
+  - Flat Table  
+  - Aggregated Table  
+
+### 📊 Consumption
+- **BI & Reporting**  
+- **Ad-hoc SQL Queries**  
+- **Machine Learning**  
+
+---
 ### BI: Analytics & Reporting (Data Analytics)
 
 **Objective**  
